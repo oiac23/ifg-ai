@@ -1,3 +1,3 @@
-# ifg-ai
+# IFG - Inteligência Artificial Aplicada
 
-## Este é um teste
+## Repositório com documentação desenvolvida durante o curso.
