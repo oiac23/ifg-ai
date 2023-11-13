@@ -1,4 +1,4 @@
-#Enunciado do exercício
+# Enunciado do exercício
 
 O banco de dados traz as respostas de 50 estudantes de ensino médio sobre questões diversas (características, hábitos e gostos pessoais). Note que nesses dados há variáveis qualitativas e quantitativas. Minha primeira sugestão é que antes de tudo vocês observem e classifiquem cada variável (coluna) de acordo com o seu tipo (qualitativa ou quantitativa e seus subtipos), para pensar quais representações gráficas poderá utilizar para tal variável.
 
