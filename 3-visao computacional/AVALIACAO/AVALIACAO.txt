@@ -1,0 +1,27 @@
+O grupo pode ser composto por até duas  pessoas. Para  trabalhos individuais será acrescentado  10% na nota !
+
+Requisitos de entrega
+
+1. Resultados (curvas e Matrizes de confusão) da CNN com Bootstrap
+
+2. Resultados da CNN com Fine tuning  
+
+3. Resultados (curvas e Matrizes de confusão) da CNN com Bootstrap com algum pré-processing.
+
+4. Resultados da CNN com Fine tuning  com algum pré-processing.
+
+5. Relatórios indicando o resultado com  e sem pré-processamento (porém com data augmentation)  usando as mesmas configurações da  da rede. 
+
+Deve haver aumento na  acurácia, ou a prova que mesmo aplicando todos os algoritmos não ouve mudança. 
+
+Algoritmos
+
+1. Operadores Morfológicos.
+
+2. Segmentação 
+
+3. Suavização, Realce, Detecção de Bordas
+
+4. Transformação para Domínio da frequência (não obrigatório).
+
+5. Cornerfeature (não obrigatório)
