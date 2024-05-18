@@ -1,0 +1,54 @@
+https://colab.research.google.com/drive/1u5XUxMLusGS01EwM2JjLgXIJi_26w5m0?usp=sharing
+
+1) Execute o código, e com o auxílio do tensorboard, identifique o problema. Descreva o problema encontrado, proponha uma solução e apresente a acurácia do teste após a solução.
+
+Função de ativação. 'sigmoid' (vanishing gradients) e separação treino/teste
+Original:
+loss: 2.2965 - acc: 0.1114 - val_loss: 2.2984 - val_acc: 0.1022  - test_loss: 2.306607283782959 - test_acc: 0.1
+Substituição para 'relu':
+loss: 0.2604 - acc: 0.9059 - val_loss: 0.4056 - val_acc: 0.8570 - test_loss: 0.5061155418157578 - test_acc: 0.8221
+
+2) Com o problema solucionado pelo item (1), retire a normalização dos dados (/255). Qual o impacto da remoção da normalização? O que justifica a diferença nos resultados?
+
+Impacto da remoção da normalização:
+A precisão nos treinos e validação são acelerados, porém aumenta o overfitting. A rede aprende até demais os dados.
+
+O que justifica a diferença nos resultados:
+A função de ativação sigmoid tem limitações e satura sem a normalização.
+
+3) Com o problema solucionado pelo item (1), altere somente a primeira camada oculta para inicialização de pesos com zero, utilizando a seguinte variável:
+
+kernel_initializer=tf.keras.initializers.Constant(value=0)
+bias_initializer=tf.keras.initializers.Constant(value=0)
+
+Faça uma análise dos resultados obtidos e descreva a implicação de sua alteração.
+
+Como os pesos são iguais a zero, os gradientes durante a retropropagação também serão zero. Isso traz o problema do desaparecimento dos gradientes.
+
+4) Com o problema solucionado pelo item (1), Altere a inicialização dos pesos da primeira camada para a constante 1 e execute os experimentos. Depois, execute um novo experimento alterando os pesos da primeira camada para constante -1:
+
+Descreva o significado da diferença entre os resultados obtidos.
+
+Como os pesos estão todos iguais, a atualização dos pesos das mesmas camadas ficam iguais, o que faz com que a rede não aprenda.
+
+5) Altere a inicialização de todas as camadas para a inicialização de he_uniform, e incremente a quantidade de épocas para 50
+
+kernel_initializer="he_uniform"
+
+A inicialização "he_uniform" é baseada na inicialização de Glorot, e é adaptada para a função de ativação ReLU e suas derivadas. Os resultados melhoram:
+
+loss: 0.1251 - acc: 0.9584 - val_loss: 0.4485 - val_acc: 0.8560 - test_loss: 0.5061155418157578 - test_acc: 0.822
+
+6) Teste a utilização da regularização por dropout (com 30%) para cada camada oculta, e reporte a diferença para o item (5) anterior.
+
+A utilização do dropout reduz o overfitting e aumenta a velocidade com que o modelo aprende.
+
+7) Em relação ao item (5), inclua o keras.layers.BatchNormalization() para cada camada oculta e descreva seu impacto nos resultados.
+
+Com o uso de Batch Normalization, o modelo é mais estável e varia menos entre as epochs.
+
+8) Em relação ao item (5), aumente o Learning Rate para 0.2 (lr=0.2), e descreva seu impacto nos resultados.
+
+Como a Learning Rate padrão do Keras é 0.001, ao aumentar esse valor para 0.2, aumenta-se a velocidade com que o modelo aprende, porém, é possível que este não encontre um mínimo global.
+
+9) Descreva um conjunto os hiper-parâmetros e possíveis valores dos mesmos que você considera importantes para avaliação da arquitetura presente no código. Reporte os hiper-parâmetros e resultado médio obtido a partir do ajuste de tais hiper-parâmetros usando a metodologia de grid-search e validação cruzada em 5-folds.
