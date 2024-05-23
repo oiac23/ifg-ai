@@ -1,4 +1,4 @@
-Start Time,Duration,Name,activation,batch_size,dim,dropout,dropout_rate,early_stop_patience,encoder_out,epochs,intermediate,learning_rate,optimizer,out_activation,type,error,score
+"Start Time",Duration,Name,activation,batch_size,dim,dropout,dropout_rate,early_stop_patience,encoder_out,epochs,intermediate,learning_rate,optimizer,out_activation,type,error,score
 22/05/2024 16:52,1.7min,autoencoder,relu,1,(89, 21, 136, 1, 228),0,0.2,80,50,230,2,0.0005,rmsprop,sigmoid,sparse,0.064444758,0.009132828
 22/05/2024 16:50,1.5min,autoencoder,relu,1,(206, 24, 83, 28, 205),0,0.25,80,50,300,2,0.0005,rmsprop,sigmoid,sparse,0.063995406,0.009149581
 22/05/2024 16:46,1.4min,autoencoder,relu,1,(148, 26, 50, 30, 305),0,0.25,80,50,180,2,0.0005,rmsprop,sigmoid,sparse,0.064642727,0.009225557
