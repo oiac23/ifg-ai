@@ -8,11 +8,13 @@ Pós-Graduação em Inteligência Artificial Aplicada. Repositório com document
     1. Cloud Computing
     2. Introdução à Inteligência Artificial
     3. Linguagem de Programação Aplicada
+    - Projeto Final
 
 2. Módulo 2:
     1. Estatistica aplicada
     2. Machine Learning
     3. Modelagem de Dados para Inteligência Artificial
+    - Projeto Final
 	
 3. Módulo 3:
     1. Deep Learning
